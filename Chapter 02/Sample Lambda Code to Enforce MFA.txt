@@ -1,0 +1,10 @@
+import boto3
+
+iam = boto3.client('iam')
+
+def lambda_handler(event, context):
+    user = event['detail']['configuration']['userName']
+    response = iam.list_mfa_devices(UserName=user)
+    if not response['MFADevices']:
+        print(f"User {user} has no MFA. Taking action.")
+        iam.update_login_profile(UserName=user, PasswordResetRequired=True)

@@ -1,0 +1,38 @@
+json
+{
+    "eventVersion": "1.05",
+    "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDACKCEVSQ6C2EXAMPLE",
+        "arn": "arn:aws:iam::111122223333:user/developer",
+        "accountId": "111122223333",
+        "accessKeyId": "AKIAIOSFODNN7EXAMPLE",
+        "userName": "developer"
+    },
+    "eventTime": "2020-07-25T23:41:52Z",
+    "eventSource": "kms.amazonaws.com",
+    "eventName": "Decrypt",
+    "awsRegion": "us-west-2",
+    "sourceIPAddress": "192.0.2.0",
+    "userAgent": "aws-cli/1.18.97 Python/3.6.10 Linux/4.9.217-0.1.ac.205.84.332.metal1.x86_64 botocore/1.17.20",
+    "requestParameters": {
+        "encryptionContext": {
+            "aws:s3:arn": "arn:aws:s3:::example-bucket/example-object"
+        },
+        "keyId": "arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab"
+    },
+    "responseElements": null,
+    "requestID": "a9d9fcf1-2eca-4ab8-a5a9-EXAMPLE",
+    "eventID": "38b9a3f2-26d4-417e-9aca-EXAMPLE",
+    "readOnly": true,
+    "resources": [
+        {
+            "accountId": "111122223333",
+            "type": "AWS::KMS::Key",
+            "ARN": "arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab"
+        }
+    ],
+    "eventType": "AwsApiCall",
+    "managementEvent": true,
+    "recipientAccountId": "111122223333"
+}
